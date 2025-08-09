@@ -489,10 +489,17 @@ function showResults(score) {
   testSection.style.display = "none";
   resultSection.style.display = "block";
 
-  // Keep the audio playing if it was playing
+  // Handle audio transition
   if (listeningAudio && resultAudio) {
+    // Pause the original audio first
+    const wasPlaying = !listeningAudio.paused;
+    listeningAudio.pause();
+
+    // Copy the current time
     resultAudio.currentTime = listeningAudio.currentTime;
-    if (!listeningAudio.paused) {
+
+    // Play the result audio only if the original was playing
+    if (wasPlaying) {
       resultAudio.play().catch((e) => console.log("Audio play error:", e));
     }
   }

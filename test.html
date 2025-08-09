@@ -67,19 +67,7 @@
           <!-- Answers will be inserted here by JavaScript -->
         </div>
         <button id="back-to-tests" class="submit-btn">Back to Tests</button>
-        <div id="recovery-modal" class="modal">
-          <div class="modal-content">
-            <h3>Continue unfinished test?</h3>
-            <p>
-              We found an unfinished test started at
-              <span id="recovery-time"></span>
-            </p>
-            <div class="modal-buttons">
-              <button id="recover-btn">Continue Test</button>
-              <button id="start-new-btn">Start New Test</button>
-            </div>
-          </div>
-        </div>
+
         <!-- Fixed Audio Player at Bottom -->
         <div class="fixed-audio-player">
           <audio controls id="result-audio">
@@ -94,5 +82,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <div id="recovery-modal" class="modal">
+      <div class="modal-content">
+        <h3>Continue unfinished test?</h3>
+        <p>
+          We found an unfinished test started at
+          <span id="recovery-time"></span>
+        </p>
+        <div class="modal-buttons">
+          <button id="recover-btn">Continue Test</button>
+          <button id="start-new-btn">Start New Test</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
