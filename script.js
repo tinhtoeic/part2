@@ -107,7 +107,7 @@ function generateSampleData(testId) {
 
   return {
     title: `Test ${testId}`,
-    audio: `audio/test${testId}.mp3`,
+    audio: `/part2/audio/test${testId}.mp3`,
     questions: questions,
   };
 }
