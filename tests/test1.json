@@ -1,6 +1,6 @@
 {
   "title": "Test 1",
-  "audio": "part2/audio/T1P2.mp3",
+  "audio": "/part2/audio/T1P2.mp3",
   "questions": [
     {
       "number": 7,
