@@ -4,6 +4,7 @@ let studentName = "";
 let testData = {};
 let userAnswers = {};
 let currentQuestionIndex = 0;
+let autoSaveInterval;
 
 // DOM elements
 const testGrid = document.querySelector(".test-grid");
@@ -25,6 +26,10 @@ const prevQuestionBtn = document.getElementById("prev-question");
 const nextQuestionBtn = document.getElementById("next-question");
 const currentQDisplay = document.getElementById("current-q");
 const questionGrid = document.querySelector(".question-grid");
+const recoveryModal = document.getElementById("recovery-modal");
+const recoveryTime = document.getElementById("recovery-time");
+const recoverBtn = document.getElementById("recover-btn");
+const startNewBtn = document.getElementById("start-new-btn");
 
 // Initialize the page
 async function init() {
@@ -53,11 +58,125 @@ async function init() {
       nextQuestionBtn.addEventListener("click", () =>
         navigateToQuestion(currentQuestionIndex + 1)
       );
+
+      // Check for saved test
+      checkSavedTest();
     } catch (error) {
       console.error("Error loading test data:", error);
       // Fallback to sample data if loading fails
       testData = generateSampleData(currentTest);
     }
+  }
+}
+
+// Check for saved test state
+function checkSavedTest() {
+  const savedState = localStorage.getItem("toeicTestState");
+  if (!savedState) return;
+
+  const state = JSON.parse(savedState);
+  if (!state.testStarted) return;
+
+  // Only show recovery if it's the same test
+  if (state.currentTest === currentTest) {
+    showRecoveryDialog(state.timestamp);
+  }
+}
+
+// Show recovery dialog
+function showRecoveryDialog(timestamp) {
+  recoveryTime.textContent = new Date(timestamp).toLocaleString();
+  recoveryModal.style.display = "flex";
+
+  recoverBtn.onclick = () => {
+    recoveryModal.style.display = "none";
+    restoreTestState();
+  };
+
+  startNewBtn.onclick = () => {
+    localStorage.removeItem("toeicTestState");
+    recoveryModal.style.display = "none";
+    location.reload();
+  };
+}
+
+// Restore test state
+function restoreTestState() {
+  const saved = localStorage.getItem("toeicTestState");
+  if (!saved) return;
+
+  const state = JSON.parse(saved);
+  if (!state.testStarted) return;
+
+  // Restore basic data
+  studentName = state.studentName;
+  userAnswers = state.userAnswers || {};
+  currentQuestionIndex = state.currentQuestionIndex || 0;
+
+  // Fill name field
+  studentNameInput.value = studentName;
+
+  // Start test (but don't save yet)
+  nameInputSection.style.display = "none";
+  testSection.style.display = "block";
+  studentNameDisplay.textContent =
+    studentName.length > 15
+      ? studentName.substring(0, 12) + "..."
+      : studentName;
+  studentNameDisplay.title = studentName;
+
+  testTitle.textContent = testData.title || `Test ${currentTest}`;
+
+  // Set audio source
+  if (listeningAudio) {
+    listeningAudio.src = testData.audio || `audio/test${currentTest}.mp3`;
+  }
+  if (resultAudio) {
+    resultAudio.src = testData.audio || `audio/test${currentTest}.mp3`;
+  }
+
+  // Render questions
+  renderQuestions();
+
+  // Restore answers
+  Object.keys(userAnswers).forEach((qNumber) => {
+    const input = document.querySelector(
+      `input[name="q${qNumber}"][value="${userAnswers[qNumber]}"]`
+    );
+    if (input) input.checked = true;
+  });
+
+  // Navigate to saved question
+  navigateToQuestion(currentQuestionIndex);
+  updateNavigation();
+  setupProgressTracking();
+
+  // Start auto-save
+  autoSaveInterval = setInterval(saveTestState, 30000);
+  window.addEventListener("beforeunload", handleBeforeUnload);
+}
+
+// Save current test state
+function saveTestState() {
+  const state = {
+    currentTest,
+    studentName,
+    userAnswers,
+    currentQuestionIndex,
+    testStarted: testSection.style.display !== "none",
+    timestamp: new Date().toISOString(),
+  };
+  localStorage.setItem("toeicTestState", JSON.stringify(state));
+  console.log("Test state saved");
+}
+
+// Handle beforeunload event
+function handleBeforeUnload(e) {
+  if (testSection.style.display !== "none") {
+    saveTestState();
+    e.preventDefault();
+    e.returnValue =
+      "Bạn có chắc muốn rời đi? Tiến trình làm bài sẽ được lưu tự động.";
   }
 }
 
@@ -107,7 +226,7 @@ function generateSampleData(testId) {
 
   return {
     title: `Test ${testId}`,
-    audio: `/part2/audio/test${testId}.mp3`,
+    audio: `part2/audio/test${testId}.mp3`,
     questions: questions,
   };
 }
@@ -158,6 +277,11 @@ function startTest() {
 
   // Update progress bar as user answers questions
   setupProgressTracking();
+
+  // Start auto-save
+  autoSaveInterval = setInterval(saveTestState, 30000);
+  window.addEventListener("beforeunload", handleBeforeUnload);
+  saveTestState(); // Save immediately
 }
 
 // Setup progress tracking
@@ -177,6 +301,10 @@ function setupProgressTracking() {
       if (progressBar) {
         progressBar.style.width = `${progress}%`;
       }
+
+      // Save answer to userAnswers
+      const questionNumber = input.name.substring(1);
+      userAnswers[questionNumber] = input.value;
 
       // Update navigation to show answered questions
       updateNavigation();
@@ -317,6 +445,11 @@ function submitTest() {
 
   // Display results
   showResults(score);
+
+  // Clear saved state
+  localStorage.removeItem("toeicTestState");
+  clearInterval(autoSaveInterval);
+  window.removeEventListener("beforeunload", handleBeforeUnload);
 }
 
 // Calculate score
@@ -395,6 +528,8 @@ function showResults(score) {
       answersContainer.appendChild(answerItem);
     });
   }
+
+  // Save results to Google Sheets
   saveResultsToGoogleSheets(studentName, score.correct);
 }
 
@@ -403,21 +538,20 @@ function goBackToTests() {
   window.location.href = "index.html";
 }
 
-// Initialize the app when the page loads
-document.addEventListener("DOMContentLoaded", init);
+// Save results to Google Sheets
 async function saveResultsToGoogleSheets(studentName, correctAnswers) {
   const SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbwRvOoHa1Gpry9R5hrvPD5e2biNYFUJioM52Oopx-dgKdIBaEKbTrsc9uY59N_R63_V/exec";
 
-  // Tạo payload
+  // Create payload
   const payload = {
-    studentName: studentName.substring(0, 100), // Giới hạn độ dài
+    studentName: studentName.substring(0, 100), // Limit length
     correctAnswers: Number(correctAnswers) || 0,
   };
 
   console.log("Preparing to send:", payload);
 
-  // Phương thức POST chính
+  // Try POST method first
   try {
     const response = await fetch(SCRIPT_URL, {
       method: "POST",
@@ -426,10 +560,10 @@ async function saveResultsToGoogleSheets(studentName, correctAnswers) {
         Accept: "application/json",
       },
       body: JSON.stringify(payload),
-      mode: "no-cors", // Quan trọng khi gọi từ frontend
+      mode: "no-cors", // Important for frontend calls
     });
 
-    // Kiểm tra response (dù ở mode no-cors)
+    // Check response (even in no-cors mode)
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -439,7 +573,7 @@ async function saveResultsToGoogleSheets(studentName, correctAnswers) {
   } catch (error) {
     console.error("POST failed, trying GET fallback:", error);
 
-    // Phương án dự phòng dùng GET
+    // Fallback to GET method
     try {
       const getUrl =
         `${SCRIPT_URL}?` +
@@ -459,3 +593,6 @@ async function saveResultsToGoogleSheets(studentName, correctAnswers) {
     }
   }
 }
+
+// Initialize the app when the page loads
+document.addEventListener("DOMContentLoaded", init);

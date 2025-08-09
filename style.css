@@ -622,3 +622,49 @@ footer {
     padding: 1.5rem 0.5rem;
   }
 }
+/* Thêm vào cuối file style.css */
+/* Modal recovery dialog */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modal-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#recover-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+#start-new-btn {
+  background: white;
+  border: 1px solid var(--border-color);
+}
