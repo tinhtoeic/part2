@@ -53,8 +53,8 @@
     {
       "number": 15,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>15. Our division's picnic is this Saturday, right?</strong><br>(A) There's a lot of rain in the forecast. → <span style='color:red'>Incorrect</span> (discusses weather, not date)<br>(B) Sure, I like salad. → <span style='color:red'>Incorrect</span> (mentions food, not date)<br>(C) At the end of this corridor. → <span style='color:red'>Incorrect</span> (refers to location, not date)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'Yes, it's this Saturday.'"
+      "correctAnswer": "A",
+      "explanation": "<strong>15. Our division's picnic is this Saturday, right?</strong><br>(A) There's a lot of rain in the forecast. → <span style='color:green'>Correct</span><br>(B) Sure, I like salad. → <span style='color:red'>Incorrect</span> (mentions food, not date)<br>(C) At the end of this corridor. → <span style='color:red'>Incorrect</span> (refers to location, not date)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'Yes, it's this Saturday.'"
     },
     {
       "number": 16,
@@ -113,8 +113,8 @@
     {
       "number": 25,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>25. Where are the red roses that came in this morning?</strong><br>(A) About three liters of water. → <span style='color:red'>Incorrect</span> (unrelated to location)<br>(B) No, I didn't check out the sale. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) I needed some for a large bouquet. → <span style='color:red'>Incorrect</span> (explains use, not location)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'They're in the back room.'"
+      "correctAnswer": "C",
+      "explanation": "<strong>25. Where are the red roses that came in this morning?</strong><br>(A) About three liters of water. → <span style='color:red'>Incorrect</span> (unrelated to location)<br>(B) No, I didn't check out the sale. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) I needed some for a large bouquet. → <span style='color:green'>Correct</span> (this answer)"
     },
     {
       "number": 26,

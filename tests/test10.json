@@ -59,8 +59,8 @@
     {
       "number": 16,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>16. The new marketing director will be hired soon, won't she?</strong><br>(A) Didn't you check your e-mail? → <span style='color:red'>Incorrect</span> (unrelated to hiring)<br>(B) It's about ten minutes from here. → <span style='color:red'>Incorrect</span> (refers to distance, not hiring)<br>(C) No, a little lower. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'Yes, by next month.'"
+      "correctAnswer": "A",
+      "explanation": "<strong>16. The new marketing director will be hired soon, won't she?</strong><br>(A) Didn't you check your e-mail? → <span style='color:green'>Correct</span> (this answer)<br>(B) It's about ten minutes from here. → <span style='color:red'>Incorrect</span> (refers to distance, not hiring)<br>(C) No, a little lower. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
     },
     {
       "number": 17,
@@ -71,8 +71,8 @@
     {
       "number": 18,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>18. Who can I talk to about scheduling a haircut?</strong><br>(A) Will you be available tomorrow afternoon? → <span style='color:red'>Incorrect</span> (refers to availability, not contact)<br>(B) Not too short on the sides, please. → <span style='color:red'>Incorrect</span> (refers to haircut style)<br>(C) Thanks, the scheduling software has been helpful! → <span style='color:red'>Incorrect</span> (unrelated to contact)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'The receptionist.'"
+      "correctAnswer": "A",
+      "explanation": "<strong>18. Who can I talk to about scheduling a haircut?</strong><br>(A) Will you be available tomorrow afternoon? → <span style='color:green'>Correct</span> (refers to availability, this answer)<br>(B) Not too short on the sides, please. → <span style='color:red'>Incorrect</span> (refers to haircut style)<br>(C) Thanks, the scheduling software has been helpful! → <span style='color:red'>Incorrect</span> (unrelated to contact)"
     },
     {
       "number": 19,
@@ -83,8 +83,8 @@
     {
       "number": 20,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>20. Do you take your coffee with or without milk?</strong><br>(A) The coffee shop on Bayview Avenue. → <span style='color:red'>Incorrect</span> (refers to location, not preference)<br>(B) I prefer drinking tea. → <span style='color:red'>Incorrect</span> (avoids the coffee question)<br>(C) We'll need to place an order for paper. → <span style='color:red'>Incorrect</span> (unrelated to coffee)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'With milk.'"
+      "correctAnswer": "B",
+      "explanation": "<strong>20. Do you take your coffee with or without milk?</strong><br>(A) The coffee shop on Bayview Avenue. → <span style='color:red'>Incorrect</span> (refers to location, not preference)<br>(B) I prefer drinking tea. → <span style='color:green'>Correct</span> (want to drink tea, this answer)<br>(C) We'll need to place an order for paper. → <span style='color:red'>Incorrect</span> (unrelated to coffee)"
     },
     {
       "number": 21,
@@ -95,14 +95,14 @@
     {
       "number": 22,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>22. When will next month's cost projections be ready?</strong><br>(A) That portable projector was recently replaced. → <span style='color:red'>Incorrect</span> (unrelated to cost projections)<br>(B) An unexpected surplus. → <span style='color:red'>Incorrect</span> (refers to outcome, not timing)<br>(C) I sent an e-mail a few minutes ago. → <span style='color:red'>Incorrect</span> (unrelated to projections)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'By next week.'"
+      "correctAnswer": "C",
+      "explanation": "<strong>22. When will next month's cost projections be ready?</strong><br>(A) That portable projector was recently replaced. → <span style='color:red'>Incorrect</span> (unrelated to cost projections)<br>(B) An unexpected surplus. → <span style='color:red'>Incorrect</span> (refers to outcome, not timing)<br>(C) I sent an e-mail a few minutes ago. → <span style='color:green'>Correct</span> (this answer)"
     },
     {
       "number": 23,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>23. Would you ask Tae-Joon to help set up the product display?</strong><br>(A) Several kinds of headsets. → <span style='color:red'>Incorrect</span> (unrelated to the request)<br>(B) No, I can do it myself. → <span style='color:red'>Incorrect</span> (declines but doesn't address Tae-Joon)<br>(C) I can't see the bottom line of the chart. → <span style='color:red'>Incorrect</span> (irrelevant to the request)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'Sure, I'll ask him.'"
+      "correctAnswer": "B",
+      "explanation": "<strong>23. Would you ask Tae-Joon to help set up the product display?</strong><br>(A) Several kinds of headsets. → <span style='color:red'>Incorrect</span> (unrelated to the request)<br>(B) No, I can do it myself. → <span style='color:green'>Correct</span> (declines but doesn't address Tae-Joon)<br>(C) I can't see the bottom line of the chart. → <span style='color:red'>Incorrect</span> (irrelevant to the request)"
     },
     {
       "number": 24,
@@ -137,8 +137,8 @@
     {
       "number": 29,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>29. How long will it take us to get to the theater?</strong><br>(A) Tickets for the performance are sold-out. → <span style='color:red'>Incorrect</span> (unrelated to travel time)<br>(B) At seven o'clock, I think. → <span style='color:red'>Incorrect</span> (refers to event time, not travel)<br>(C) Actually, I don't have a preference. → <span style='color:red'>Incorrect</span> (irrelevant to time)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'About 20 minutes.'"
+      "correctAnswer": "A",
+      "explanation": "<strong>29. How long will it take us to get to the theater?</strong><br>(A) Tickets for the performance are sold-out. → <span style='color:green'>Correct</span> (this answer)<br>(B) At seven o'clock, I think. → <span style='color:red'>Incorrect</span> (refers to event time, not travel)<br>(C) Actually, I don't have a preference. → <span style='color:red'>Incorrect</span> (irrelevant to time)"
     },
     {
       "number": 30,

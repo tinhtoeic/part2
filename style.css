@@ -668,3 +668,35 @@ footer {
   background: white;
   border: 1px solid var(--border-color);
 }
+/* Thêm vào cuối file style.css */
+.new-navigation-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.new-navigation-layout .submit-btn {
+  margin: 0;
+  flex-grow: 1;
+  max-width: none;
+}
+
+.new-navigation-layout .nav-button {
+  flex: 0 0 auto;
+  padding: 1rem 1.5rem;
+}
+/* Thêm vào file style.css */
+.nav-buttons #submit-test {
+  background: linear-gradient(135deg, #f72585, #b5179e);
+  margin: 0 1rem;
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

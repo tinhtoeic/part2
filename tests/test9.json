@@ -125,8 +125,8 @@
     {
       "number": 27,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>27. Does the manager want us to pick up the supplies or have them delivered?</strong><br>(A) She'll be here soon. → <span style='color:red'>Incorrect</span> (unrelated to the supplies)<br>(B) You dropped your pen. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) You're right about that. → <span style='color:red'>Incorrect</span> (vague and unrelated)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'She prefers delivery.'"
+      "correctAnswer": "A",
+      "explanation": "<strong>27. Does the manager want us to pick up the supplies or have them delivered?</strong><br>(A) She'll be here soon. → <span style='color:green'>Correct</span> (this answer)<br>(B) You dropped your pen. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) You're right about that. → <span style='color:red'>Incorrect</span> (vague and unrelated)"
     },
     {
       "number": 28,

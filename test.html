@@ -33,13 +33,15 @@
           <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
         </div>
 
+        <div class="new-navigation-layout">
+          <button id="prev-question" class="nav-button">Previous</button>
+          <button id="submit-test" class="submit-btn">Submit Test</button>
+          <button id="next-question" class="nav-button">Next</button>
+        </div>
+
         <div class="question-navigation">
-          <div class="nav-buttons">
-            <button id="prev-question" class="nav-button">Previous</button>
-            <div id="question-indicator">
-              Question <span id="current-q">7</span>/25
-            </div>
-            <button id="next-question" class="nav-button">Next</button>
+          <div id="question-indicator">
+            Question <span id="current-q">7</span>/25
           </div>
           <div class="question-grid">
             <!-- Question numbers will be inserted here by JavaScript -->
@@ -50,7 +52,7 @@
           <!-- Questions will be inserted here by JavaScript -->
         </div>
 
-        <button id="submit-test" class="submit-btn">Submit Test</button>
+        <!-- <button id="submit-test" class="submit-btn">Submit Test</button> -->
 
         <!-- Fixed Audio Player at Bottom -->
         <div class="fixed-audio-player">
