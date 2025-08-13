@@ -1,0 +1,156 @@
+{
+  "title": "Test 13",
+  "audio": "/part2/audio/T13P2.mp3",
+  "questions": [
+    {
+      "number": 7,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>7. How was the security audit today?</strong><br>(A) I can secure them. → <span style='color:red'>Incorrect</span> (unrelated to audit outcome)<br>(B) Very productive. → <span style='color:green'>Correct</span> (describes the audit's outcome)<br>(C) If you like. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 8,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>8. What dinner specials do you have today?</strong><br>(A) We have baked salmon. → <span style='color:green'>Correct</span> (specifies the dinner special)<br>(B) For the first time. → <span style='color:red'>Incorrect</span> (unrelated to dinner specials)<br>(C) No, I haven't. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 9,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>9. When will the order be delivered?</strong><br>(A) Not until Wednesday afternoon. → <span style='color:green'>Correct</span> (specifies delivery time)<br>(B) It's time to put them away. → <span style='color:red'>Incorrect</span> (unrelated to delivery time)<br>(C) The light is on in the mail room. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 10,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>10. What's the monthly membership fee for that service?</strong><br>(A) Twenty euros. → <span style='color:green'>Correct</span> (specifies the fee)<br>(B) Next month. → <span style='color:red'>Incorrect</span> (refers to time, not cost)<br>(C) Don't let me forget. → <span style='color:red'>Incorrect</span> (unrelated to the fee)"
+    },
+    {
+      "number": 11,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>11. Did you receive the e-mail I sent?</strong><br>(A) I need a receipt for that. → <span style='color:red'>Incorrect</span> (misinterprets 'receive')<br>(B) Call a delivery service. → <span style='color:red'>Incorrect</span> (unrelated to e-mail)<br>(C) I haven't looked at my computer today. → <span style='color:green'>Correct</span> (implies not receiving the e-mail)"
+    },
+    {
+      "number": 12,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>12. Why don't you have the meeting this afternoon?</strong><br>(A) Just past the library and across the street. → <span style='color:red'>Incorrect</span> (refers to location, not reason)<br>(B) Otherwise, I think it's fine. → <span style='color:red'>Incorrect</span> (vague and unrelated)<br>(C) Because we have a lot to do today. → <span style='color:green'>Correct</span> (explains the reason)"
+    },
+    {
+      "number": 13,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>13. Where did you post the schedule?</strong><br>(A) I hung a copy on the conference room door. → <span style='color:green'>Correct</span> (specifies the schedule's location)<br>(B) In a few hours. → <span style='color:red'>Incorrect</span> (refers to time, not location)<br>(C) Are you sure you submitted it? → <span style='color:red'>Incorrect</span> (unrelated to posting)"
+    },
+    {
+      "number": 14,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>14. Who is leading the safety seminar?</strong><br>(A) That's what he'said. → <span style='color:red'>Incorrect</span> (vague and unrelated)<br>(B) Elizabeth will do it. → <span style='color:green'>Correct</span> (identifies the seminar leader)<br>(C) Whenever management prefers. → <span style='color:red'>Incorrect</span> (refers to time, not person)"
+    },
+    {
+      "number": 15,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>15. Could you please fill out your time sheet by 3 P.M. today?</strong><br>(A) How much time do you have? → <span style='color:red'>Incorrect</span> (unrelated to the request)<br>(B) OK, I'll make a note to do that. → <span style='color:green'>Correct</span> (agrees to fill out the time sheet)<br>(C) I will place the order as soon as possible. → <span style='color:red'>Incorrect</span> (irrelevant to the request)"
+    },
+    {
+      "number": 16,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>16. When is the electrician supposed to get here?</strong><br>(A) The package got here last night. → <span style='color:red'>Incorrect</span> (unrelated to electrician)<br>(B) I didn't drive to work today. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) She just let me know she's running late. → <span style='color:green'>Correct</span> (addresses arrival time)"
+    },
+    {
+      "number": 17,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>17. I'd like to schedule your performance review meeting.</strong><br>(A) That is a high-performing team. → <span style='color:red'>Incorrect</span> (unrelated to scheduling)<br>(B) The food here is very good. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) OK, let me look at my calendar. → <span style='color:green'>Correct</span> (responds to scheduling request)"
+    },
+    {
+      "number": 18,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>18. Haven't you been trained to use this machine?</strong><br>(A) I can get them to take a look. → <span style='color:red'>Incorrect</span> (unrelated to training)<br>(B) We need to finish before noon. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) I use it all the time. → <span style='color:green'>Correct</span> (implies training was received)"
+    },
+    {
+      "number": 19,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>19. Did you bring your computer home or leave it at work?</strong><br>(A) Yes, last week. → <span style='color:red'>Incorrect</span> (unrelated to the computer’s location)<br>(B) I left it at the office. → <span style='color:green'>Correct</span> (specifies the computer’s location)<br>(C) In ten minutes. → <span style='color:red'>Incorrect</span> (refers to time, not location)"
+    },
+    {
+      "number": 20,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>20. Why don’t we create a video tour of the convention space?</strong><br>(A) I lost it yesterday. → <span style='color:red'>Incorrect</span> (unrelated to the video tour)<br>(B) That film has been very popular. → <span style='color:red'>Incorrect</span> (refers to another film)<br>(C) I thought you already did that. → <span style='color:green'>Correct</span> (assumes completion, this answer)"
+    },
+    {
+      "number": 21,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>21. Isn’t the food usually served at this time?</strong><br>(A) There’s been a schedule change. → <span style='color:green'>Correct</span> (explains why food isn’t served)<br>(B) The reviews of that product have been negative. → <span style='color:red'>Incorrect</span> (unrelated to food service)<br>(C) I’ll go tomorrow instead. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 22,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>22. Do you take the bus or train to work?</strong><br>(A) I love to travel. → <span style='color:red'>Incorrect</span> (unrelated to commute method)<br>(B) I prefer to drive. → <span style='color:green'>Correct</span> (specifies an alternative commute method)<br>(C) I only work on Tuesdays. → <span style='color:red'>Incorrect</span> (refers to schedule, not transport)"
+    },
+    {
+      "number": 23,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>23. Would you like me to make the reservation for you?</strong><br>(A) The hotel has a fitness club. → <span style='color:red'>Incorrect</span> (unrelated to the reservation offer)<br>(B) No, I haven’t heard of it. → <span style='color:red'>Incorrect</span> (irrelevant to the offer)<br>(C) Sure, let me find the form. → <span style='color:green'>Correct</span> (accepts the reservation offer)"
+    },
+    {
+      "number": 24,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>24. Why are you cleaning the laboratory?</strong><br>(A) Just stack the books against the wall. → <span style='color:red'>Incorrect</span> (unrelated to cleaning reason)<br>(B) I will attend if I have to. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) Haven’t you seen the inspection report? → <span style='color:green'>Correct</span> (implies cleaning due to inspection)"
+    },
+    {
+      "number": 25,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>25. What do you think of the highlighted paragraphs in this document?</strong><br>(A) I think they need further revisions. → <span style='color:green'>Correct</span> (provides opinion on the paragraphs)<br>(B) There’s some storage space upstairs. → <span style='color:red'>Incorrect</span> (unrelated to the document)<br>(C) This room has very good lighting. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 26,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>26. Who’s going to receive the final delivery?</strong><br>(A) When everyone leaves the office. → <span style='color:red'>Incorrect</span> (refers to time, not person)<br>(B) I can wait for it. → <span style='color:green'>Correct</span> (identifies the person receiving the delivery)<br>(C) Yes, but only on Fridays. → <span style='color:red'>Incorrect</span> (unrelated to the question)"
+    },
+    {
+      "number": 27,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>27. I could book our flights now, right?</strong><br>(A) It’s a long flight. → <span style='color:red'>Incorrect</span> (unrelated to booking permission)<br>(B) The trade show hasn’t been confirmed. → <span style='color:green'>Correct</span> (implies delay)<br>(C) It’s in the other room. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 28,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>28. Why do we have to reschedule this event?</strong><br>(A) This weekend or maybe early next week. → <span style='color:red'>Incorrect</span> (refers to time, not reason)<br>(B) I will do it as soon as possible. → <span style='color:red'>Incorrect</span> (unrelated to reason)<br>(C) My doctor’s appointment couldn’t be moved. → <span style='color:green'>Correct</span> (explains the rescheduling reason)"
+    },
+    {
+      "number": 29,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "A",
+      "explanation": "<strong>29. We should really consider expanding our storefront.</strong><br>(A) Didn’t you see the contract for the work? → <span style='color:green'>Correct</span> (this answer)<br>(B) I don’t know how far it is. → <span style='color:red'>Incorrect</span> (irrelevant to the question)<br>(C) We could borrow one for you. → <span style='color:red'>Incorrect</span> (unrelated to storefront expansion)"
+    },
+    {
+      "number": 30,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "B",
+      "explanation": "<strong>30. Do you know whose jacket that is in the conference room?</strong><br>(A) Sure, if they’re already planning to go. → <span style='color:red'>Incorrect</span> (unrelated to the jacket)<br>(B) A few people have blue ones like that. → <span style='color:green'>Correct</span> (addresses the jacket’s ownership)<br>(C) Yes, Janelle usually orders them for us. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
+    },
+    {
+      "number": 31,
+      "options": ["A", "B", "C"],
+      "correctAnswer": "C",
+      "explanation": "<strong>31. When do you usually exercise?</strong><br>(A) Fitness is important for everyone. → <span style='color:red'>Incorrect</span> (unrelated to timing)<br>(B) An affordable machine. → <span style='color:red'>Incorrect</span> (refers to equipment, not time)<br>(C) My doctor has suggested that I stop for a while. → <span style='color:green'>Correct</span> (implies no current exercise schedule)"
+    }
+  ]
+}
