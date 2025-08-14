@@ -399,12 +399,25 @@ function goBackToTests() {
 
 async function saveResultsToGoogleSheets(studentName, correctAnswers) {
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwRvOoHa1Gpry9R5hrvPD5e2biNYFUJioM52Oopx-dgKdIBaEKbTrsc9uY59N_R63_V/exec";
+    "https://script.google.com/macros/s/AKfycbzjR12cQmWty8ODHbI-x2OFOjY4D_7KSLOi4Q3Sf9FlAb7EGVcawpWm3IxezDY2gF1BWg/exec";
+
+  // Chuẩn bị dữ liệu chi tiết các câu trả lời
+  const answerDetails = testData.questions.map((question) => {
+    return {
+      questionNumber: question.number,
+      userAnswer: userAnswers[question.number] || "Not answered",
+      correctAnswer: question.correctAnswer,
+      isCorrect: userAnswers[question.number] === question.correctAnswer,
+    };
+  });
 
   const payload = {
     studentName: studentName.substring(0, 100),
     correctAnswers: Number(correctAnswers) || 0,
-    testNumber: currentTest, // gửi thêm số hiệu bài test
+    testNumber: currentTest, // Đảm bảo gửi số hiệu bài test
+    totalQuestions: testData.questions.length,
+    answerDetails: JSON.stringify(answerDetails), // Chuỗi hóa dữ liệu chi tiết
+    timestamp: new Date().toISOString(),
   };
 
   console.log("Preparing to send:", payload);
@@ -429,6 +442,9 @@ async function saveResultsToGoogleSheets(studentName, correctAnswers) {
           studentName: payload.studentName,
           correctAnswers: payload.correctAnswers,
           testNumber: payload.testNumber,
+          totalQuestions: payload.totalQuestions,
+          answerDetails: payload.answerDetails,
+          timestamp: payload.timestamp,
         });
       await fetch(getUrl, { mode: "no-cors" });
       return { status: "success" };
