@@ -101,7 +101,7 @@
     {
       "number": 23,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
+      "correctAnswer": "B",
       "explanation": "<strong>23. Let's talk about your project after lunch.</strong><br>(A) Because her microphone is broken. → <span style='color:red'>Incorrect</span> (unrelated to the project discussion)<br>(B) I'm leaving work early today. → <span style='color:green'>Correct</span> (implies unavailability, this answer)<br>(C) I have two pairs of shoes. → <span style='color:red'>Incorrect</span> (irrelevant to the question)"
     },
     {
@@ -137,8 +137,8 @@
     {
       "number": 29,
       "options": ["A", "B", "C"],
-      "correctAnswer": "None",
-      "explanation": "<strong>29. How long will we have to wait for a taxi to arrive?</strong><br>(A) About twelve kilometers. → <span style='color:red'>Incorrect</span> (refers to distance, not time)<br>(B) No, I don't think so. → <span style='color:red'>Incorrect</span> (unrelated to wait time)<br>(C) Would you prefer to walk? → <span style='color:red'>Incorrect</span> (suggests an alternative, not wait time)<br><span style='color:blue'>Note</span>: No correct answer provided; correct answer should be, e.g., 'About ten minutes.'"
+      "correctAnswer": "C",
+      "explanation": "<strong>29. How long will we have to wait for a taxi to arrive?</strong><br>(A) About twelve kilometers. → <span style='color:red'>Incorrect</span> (refers to distance, not time)<br>(B) No, I don't think so. → <span style='color:red'>Incorrect</span> (unrelated to wait time)<br>(C) Would you prefer to walk? → <span style='color:green'>Correct</span> (suggests an alternative, this answer)"
     },
     {
       "number": 30,
