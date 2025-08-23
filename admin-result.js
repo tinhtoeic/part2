@@ -32,7 +32,7 @@ const testInfoPanel = document.getElementById("test-info-panel");
 const answersContainer = document.getElementById("answers-container");
 
 // Admin email
-const ADMIN_EMAIL = "tinhpr556@gmail.com";
+const ADMIN_EMAIL = "tinhpr556@gmail.com" || "trantrinh0203@gmail.com";
 
 // Auth handling
 if (logoutBtn) {
