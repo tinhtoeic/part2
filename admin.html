@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diệu Thanh English - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo">Diệu Thanh English</div>
+        <div class="auth-section">
+          <span id="user-info"></span>
+          <button id="login-btn" class="auth-btn">Login with Google</button>
+          <button id="logout-btn" class="auth-btn" style="display: none">
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a
+            href="admin.html"
+            id="admin-dashboard-link"
+            class="nav-link"
+            style="display: none"
+            >Admin Dashboard</a
+          >
+          <a
+            href="history.html"
+            id="history-link"
+            class="nav-link"
+            style="display: none"
+            >History</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Admin Dashboard</h1>
+      <div class="subtitle">View test results for all users</div>
+      <div class="filters">
+        <input
+          type="text"
+          id="filter-user"
+          placeholder="Search by name/email..."
+        />
+
+        <select id="filter-test">
+          <option value="">All Tests</option>
+          <option value="1">Test 1</option>
+          <option value="2">Test 2</option>
+          <option value="3">Test 3</option>
+          <!-- ... add thêm nếu muốn -->
+        </select>
+
+        <select id="filter-score">
+          <option value="">All Scores</option>
+          <option value="high">≥ 80%</option>
+          <option value="medium">50–79%</option>
+          <option value="low">< 50%</option>
+        </select>
+      </div>
+
+      <div id="admin-content">
+        <table id="results-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Test Number</th>
+              <th>Score</th>
+              <th>Percentage</th>
+              <th>Completed At</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+        <p id="no-results" style="display: none">No test results found.</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="made-by">Made by Nguyễn Tình</div>
+    </footer>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

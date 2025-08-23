@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Test Result - Diệu Thanh English</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo">Diệu Thanh English</div>
+        <div class="auth-section">
+          <span id="user-info"></span>
+          <button id="logout-btn" class="auth-btn" style="display: none">
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="admin.html" class="nav-link">Admin Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>User Test Result</h1>
+      <div id="user-info-panel"></div>
+      <div id="test-info-panel"></div>
+
+      <div id="answers-container"></div>
+
+      <div style="margin-top: 2rem">
+        <a href="admin.html" class="auth-btn">Back to Dashboard</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="made-by">Made by Nguyễn Tình</div>
+    </footer>
+
+    <script type="module" src="admin-result.js"></script>
+  </body>
+</html>

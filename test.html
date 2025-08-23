@@ -3,99 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TOEIC Test - Diệu Thanh English</title>
+    <title>TOEIC Listening Part 2 - Test</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <div class="logo">Diệu Thanh English</div>
-    </header>
-
+  <div class="header-top">
+    <div class="logo">Diệu Thanh English</div>
+    <div class="auth-section">
+      <span id="user-info"></span>
+      <button id="login-btn" class="auth-btn">Login with Google</button>
+      <button id="logout-btn" class="auth-btn" style="display: none">
+        Logout
+      </button>
+    </div>
+  </div>
+  
+  <div class="header-bottom">
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a
+        href="admin.html"
+        id="admin-dashboard-link"
+        class="nav-link"
+        style="display: none"
+        >Admin Dashboard</a
+      >
+      <a
+        href="history.html"
+        id="history-link"
+        class="nav-link"
+        style="display: none"
+        >History</a
+      >
+    </nav>
+  </div>
+</header>
+    <!-- Main Test Section -->
     <main class="container">
-      <div id="name-input-section">
-        <h1>TOEIC Listening Part 2</h1>
-        <p>Enter your name to begin the test</p>
-        <input type="text" id="student-name" placeholder="Your full name" />
-        <button id="start-test">Start Test</button>
-      </div>
-
       <div id="test-section" style="display: none">
         <div class="test-header">
-          <h2 id="test-title">Test 1</h2>
+          <h2 id="test-title">TOEIC Listening Part 2</h2>
           <div id="student-name-display"></div>
         </div>
 
+        <!-- Progress Bar -->
         <div class="progress-container">
           <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
         </div>
 
+        <!-- Navigation Buttons -->
         <div class="nav-buttons">
           <button id="prev-question" class="nav-button">Previous</button>
           <button id="submit-test" class="submit-btn">Submit Test</button>
           <button id="next-question" class="nav-button">Next</button>
         </div>
 
-        <div class="question-navigation">
-          <div id="question-indicator">
-            Question <span id="current-q">7</span>/25
-          </div>
-          <div class="question-grid">
-            <!-- Question numbers will be inserted here by JavaScript -->
-          </div>
-        </div>
-
-        <div class="questions-container">
-          <!-- Questions will be inserted here by JavaScript -->
-        </div>
-
-        <!-- <button id="submit-test" class="submit-btn">Submit Test</button> -->
-
-        <!-- Fixed Audio Player at Bottom -->
-        <div class="fixed-audio-player">
-          <audio controls id="listening-audio">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
+        <!-- Questions will load here -->
+        <div class="questions-container" id="questions-container"></div>
       </div>
 
+      <!-- Result Section -->
       <div id="result-section" style="display: none">
-        <h2>Test Results</h2>
+        <h2>Your Results</h2>
         <div id="score-display"></div>
-        <div id="answers-container">
-          <!-- Answers will be inserted here by JavaScript -->
-        </div>
-        <button id="back-to-tests" class="submit-btn">Back to Tests</button>
-
-        <!-- Fixed Audio Player at Bottom -->
-        <div class="fixed-audio-player">
-          <audio controls id="result-audio">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
+        <div id="answers-container"></div>
       </div>
     </main>
 
+    <!-- Fixed Audio Player -->
+    <div class="fixed-audio-player">
+      <audio controls id="listening-audio">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Footer -->
     <footer>
       <div class="made-by">Made by Nguyễn Tình</div>
     </footer>
 
-    <script src="script.js"></script>
-    <div id="recovery-modal" class="modal">
-      <div class="modal-content">
-        <h3>Continue unfinished test?</h3>
-        <p>
-          We found an unfinished test started at
-          <span id="recovery-time"></span>
-        </p>
-        <div class="modal-buttons">
-          <button id="recover-btn">Continue Test</button>
-          <button id="start-new-btn">Start New Test</button>
-        </div>
-      </div>
-    </div>
+    <!-- Scripts -->
+    <script type="module" src="script.js"></script>
   </body>
 </html>

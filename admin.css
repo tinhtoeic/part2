@@ -1,0 +1,285 @@
+/* Reuse variables from style.css for consistency */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --accent-color: #4cc9f0;
+  --background-color: #f8f9ff;
+  --card-bg: #ffffff;
+  --text-color: #2b2d42;
+  --light-text: #8d99ae;
+  --border-color: #e9ecef;
+  --correct-color: #4caf50;
+  --incorrect-color: #f44336;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 1.2rem 2.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>');
+  margin-right: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+  flex: 1;
+}
+
+h1 {
+  font-size: 2.2rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.subtitle {
+  color: var(--light-text);
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+}
+
+#results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+#results-table th,
+#results-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#results-table th {
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  color: white;
+  font-weight: 600;
+}
+
+#results-table tr:hover {
+  background-color: rgba(67, 97, 238, 0.05);
+}
+
+.auth-btn {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(67, 97, 238, 0.4);
+}
+
+#no-results {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+footer {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  text-align: right;
+  padding: 1.2rem 2.5rem;
+  margin-top: auto;
+}
+
+.made-by {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  #results-table th,
+  #results-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #results-table {
+    font-size: 0.85rem;
+  }
+
+  .auth-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: var(--accent-color);
+}
+/* Sửa đổi phần header để có bố cục trái-phải */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 1.2rem 2.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Đẩy các phần sang hai bên */
+  align-items: center;
+}
+
+/* Nhóm các link điều hướng bên trái */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Nhóm các phần tử bên phải (user info, auth buttons) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Điều chỉnh khoảng cách giữa các nav-link */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem; /* Thay đổi từ margin-left sang margin-right */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Điều chỉnh auth button */
+.auth-btn {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(67, 97, 238, 0.4);
+}
+
+/* User info style */
+#user-info {
+  color: white;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.filters {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
