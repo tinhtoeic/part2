@@ -32,8 +32,10 @@ const testInfoPanel = document.getElementById("test-info-panel");
 const answersContainer = document.getElementById("answers-container");
 
 // Admin email
-const ADMIN_EMAIL = "tinhpr556@gmail.com" || "trantrinh0203@gmail.com";
-
+const ADMIN_EMAILS = ["tinhpr556@gmail.com", "trantrinh0203@gmail.com"];
+function isAdmin(user) {
+  return user && ADMIN_EMAILS.includes(user.email);
+}
 // Auth handling
 if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
@@ -47,7 +49,7 @@ if (logoutBtn) {
 }
 
 onAuthStateChanged(auth, async (user) => {
-  if (user && user.email === ADMIN_EMAIL) {
+  if (user && isAdmin(user)) {
     if (logoutBtn) logoutBtn.style.display = "inline-block";
     if (userInfo)
       userInfo.textContent = `Admin: ${user.displayName || user.email}`;
